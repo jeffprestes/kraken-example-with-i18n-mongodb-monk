@@ -24,6 +24,12 @@ module.exports = function (router) {
       res.redirect('/');
     });
 
+    router.get('/users/setlocale/:locale', function (req, res)  {
+      console.log('Locale: ' + req.params.locale);
+      res.cookie('locale', req.params.locale);
+      res.redirect('/users');
+    });
+
     router.get('/responsivo', function (req, res) {
         var model = new AbcModel(req);
         var locale = req.cookies && req.cookies.locale;
@@ -42,9 +48,9 @@ module.exports = function (router) {
            locality: locale
        };
 
-       var users = new UserModel();
+       var users = new UserModel(req);
 
-       users.query(req).then(function (data)  {
+       users.query().then(function (data)  {
          logger.debug(JSON.stringify(data));
          res.render('users', data);
        });

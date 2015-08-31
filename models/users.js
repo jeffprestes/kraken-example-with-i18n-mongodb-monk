@@ -2,16 +2,17 @@
 var pine = require('pine');
 var MPromise = require('mpromise');
 var logger = pine();
+var promise = new MPromise();
+var db;
+var collection;
 
-function UserModel () {
+function UserModel (req) {
+  db = req.db;
+  collection = db.get('usercollection');
 
 }
 
-UserModel.prototype.query = function (req)  {
-
-  var db = req.db;
-  var collection = db.get('usercollection');
-  var promise = new MPromise();
+UserModel.prototype.query = function ()  {
 
   collection.find({}, {}, function(err, docs) {
       if (err)  {

@@ -12,16 +12,4 @@
       <li><a href="http://localhost:8000/setLocale/es-ES">es-ES</a> {?isES} <<-- {:else} () {/isES}
       <li><a href="http://localhost:8000/setLocale/de-DE">de-DE</a> {?isDE} <<-- {:else} () {/isDE}
     </ul>
-    <ol>
-      {#languages}<li>{name}
-      {/languages}
-    </ol>
-    <br />
-    <div>
-      {@size key="languages" /}
-    </div>
-    <hr />
-    <div>
-      Hello {context.appName} - {appVersion}
-    </div>
 {/body}
