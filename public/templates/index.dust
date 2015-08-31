@@ -1,0 +1,27 @@
+{>"layouts/master" /}
+
+{<title}
+  {@pre type="content" key="title"/}
+{/title}
+
+{<body}
+    <h1>{@pre type="content" key="greeting"/}</h1>
+    <h4>{@pre type="content" key="msg"/}</h4>
+    <ul>
+      <li><a href="http://localhost:8000/setLocale/en-US">en-US</a> {?isUS} <<-- {:else} () {/isUS}
+      <li><a href="http://localhost:8000/setLocale/es-ES">es-ES</a> {?isES} <<-- {:else} () {/isES}
+      <li><a href="http://localhost:8000/setLocale/de-DE">de-DE</a> {?isDE} <<-- {:else} () {/isDE}
+    </ul>
+    <ol>
+      {#languages}<li>{name}
+      {/languages}
+    </ol>
+    <br />
+    <div>
+      {@size key="languages" /}
+    </div>
+    <hr />
+    <div>
+      Hello {context.appName} - {appVersion}
+    </div>
+{/body}

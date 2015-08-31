@@ -1,0 +1,67 @@
+{>"layouts/master" /}
+
+{<title}
+  {@pre type="content" key="title"/}
+{/title}
+
+
+{<body}
+
+    <!-- Responsible design test -->
+      <header class="header">
+        {@pre type="content" key="greeting"/}
+      </header>
+      <div class="content">
+      	<div class="content-main">
+
+      		<article class="hero">
+      			<h1>
+      				{@pre type="content" key="msg"/}
+      			</h1>
+      			<p class="brief">
+      				Descrição ou resumido de um conteudo importante, que precisa ser mostrado para evidenciar a notoriedade dele.
+      			</p>
+      		</article>
+
+      		<div class="last-contents">
+      			<article class="last-content-call">
+      				<h2 class="secondary-title">
+      					Titulo de conteúdo
+      				</h2>
+      				<p class="brief">
+      					Descrição ou resumido de um conteudo importante, que precisa ser mostrado para evidenciar a notoriedade dele.
+      				</p>
+      				<a href="#">Leia mais</a>
+      			</article>
+
+      			<article class="last-content-call">
+      				<h2 class="secondary-title">
+      					Titulo de conteúdo
+      				</h2>
+              <img src="images/pantokrator.png" width="350">
+      				<p class="brief">
+      					Descrição ou resumido de um conteudo importante, que precisa ser mostrado para evidenciar a notoriedade dele.
+      				</p>
+      				<a href="#">Leia mais</a>
+      			</article>
+      		</div>
+      	</div>
+    </div>
+
+    <aside class="content-sidebar">
+  		<nav class="main-nav">
+  			<ul>
+  				<li><a href="#">Menu 1</a>
+  				<li><a href="#">Menu 2</a>
+  				<li><a href="#">Menu 3</a>
+  				<li><a href="#">Menu 4</a>
+  				<li><a href="#">Menu 5</a>
+  			</ul>
+  		</nav>
+      <video src="videos/wat.mov" width="560" height="315" frameborder="0" allowfullscreen></video>
+  	</aside>
+
+    <footer class="main-footer">
+    	<p class="footer-message">Todos os direitos reservados 2015
+    </footer>
+{/body}
