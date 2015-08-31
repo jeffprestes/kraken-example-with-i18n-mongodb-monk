@@ -12,7 +12,7 @@ To run it, you must:
 
 After application starts visit http://localhost:8000/ and select the locale. To visit the list of users go to http://localhost:8000/users.
 
-To change the language you must call http://localhost:8000/users/setlocale/<language>-<country>, for example http://localhost:8000/setlocale/en-US
+You also can change the locale calling: *http://localhost:8000/users/setlocale/language-country*, for example http://localhost:8000/setlocale/en-US. It will set a cookie in your browser and reload the content with new locale.
 
 For more information, visit:
 
