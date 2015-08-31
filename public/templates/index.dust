@@ -6,7 +6,9 @@
 
 {<body}
     <h1>{@pre type="content" key="greeting"/}</h1>
+    <br />
     <h4>{@pre type="content" key="msg"/}</h4>
+    <br />
     <ul>
       <li><a href="http://localhost:8000/setLocale/en-US">en-US</a> {?isUS} <<-- {:else} () {/isUS}
       <li><a href="http://localhost:8000/setLocale/es-ES">es-ES</a> {?isES} <<-- {:else} () {/isES}
