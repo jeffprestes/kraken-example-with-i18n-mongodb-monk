@@ -1,6 +1,7 @@
 'use strict';
 
 var AbcModel = require('../models/index');
+var UserModel = require('../models/users');
 var pine = require('pine');
 
 module.exports = function (router) {
@@ -41,19 +42,13 @@ module.exports = function (router) {
            locality: locale
        };
 
-       var db = req.db;
-       var collection = db.get('usercollection');
+       var users = new UserModel();
 
-       collection.find({}, {}, function(err, docs) {
-           if (err)  {
-             logger.error(err);
-           } else {
-             var model = {
-               users: docs
-             }
-             res.render('users', model);
-           }
+       users.query(req).then(function (data)  {
+         logger.debug(JSON.stringify(data));
+         res.render('users', data);
        });
+
     });
 
 };

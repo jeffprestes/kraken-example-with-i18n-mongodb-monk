@@ -5,8 +5,13 @@
 {/title}
 
 {<body}
+  <br />
+  <h1>{@pre type="content" key="title"/}</h1>
+  <br />
+  <h2>{@pre type="content" key="invitation"/}</h2>
+  <br />
   <ol>
-    {#users}<li><a href="{email}">{username}</a>
+    {#users}<li><a href="mailto:{email}">{username}</a>
     {/users}
   </ol>
 {/body}
